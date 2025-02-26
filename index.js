@@ -1,12 +1,18 @@
-let express = require("Express");
+const express = require("express");
+const cool = require("cool-ascii-faces");
+const app = express();
+const PORT = process.env.PORT || 16078;
 
-let app = express();
+app.use("/",express.static("./public"));
 
-
-app.get("/",(request, response)=> {
-    response.send("Hello from the server!")
+app.get("/hello",(request,response)=>{
+    response.send("Hello from the server!");
 });
 
-app.listen(16078);
+app.get("/cool",(request,response)=>{
+    response.send(cool());
+});
 
-console.log("Server runnning!");
+app.listen(PORT,()=>{
+    console.log(`Server running on port ${PORT}!`);
+});
