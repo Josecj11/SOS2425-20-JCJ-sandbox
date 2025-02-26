@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Josecj11/SOS2425-20-JCJ-sandbox/issues"
   },
-  "homepage": "https://github.com/Josecj11/SOS2425-20-JCJ-sandbox#readme"
+  "homepage": "https://github.com/Josecj11/SOS2425-20-JCJ-sandbox#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
